@@ -1,0 +1,61 @@
+<div mat-dialog-title> <h1>Emloyeur Form</h1> </div>
+<form  [formGroup]="empForm"  (ngSubmit)="onFormSubmi()">
+<div mat-dialog-content style="height: 350px;;">
+  <div style="display: flex; width: 100%; gap: 20px; align-items: center;">
+     <mat-form-field appearance="outline" >
+        <mat-label>First Name</mat-label>
+        <input matInput type="text"    [formControl]="firstNameCtrl" >
+     </mat-form-field>
+     <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" [formControl]="LastNameCtrl" >
+     </mat-form-field>
+  </div>
+  <div style="display: flex; width: 100%; gap: 20px; align-items: center;">
+    <mat-form-field appearance="outline" >
+       <mat-label>Email</mat-label>
+       <input matInput type="email"  [formControl]="emailCtrl" >
+    </mat-form-field>
+      <mat-form-field appearance="outline" >
+        <mat-label>Date of Birth</mat-label>
+        <input matInput type="email" [matDatepicker]="picker"  (click)="picker.open()" [formControl]="dateOfBirthCtrl">
+        <mat-datepicker #picker></mat-datepicker>
+     </mat-form-field>
+    </div>
+   <mat-radio-group aria-label="Select an option" style="display: flex; justify-content: space-around;" [formControl]="genreCtrl">
+      <label><b>Genre</b></label>
+      <mat-radio-button  color="primary" value="Homme" >Homme</mat-radio-button>
+      <mat-radio-button color="primary" value="Femme">Femme</mat-radio-button>
+      <mat-radio-button  color="primary" value="Autres">Autres</mat-radio-button>
+    </mat-radio-group>
+    <div style="display: flex; width: 100%; gap: 20px; align-items: center;margin-top: 10px;">
+      <mat-form-field appearance="outline">
+         <mat-label>Education</mat-label>
+         <mat-select [formControl]="educationCtrl">
+             <mat-option [value]="education" *ngFor="let education of education" >{{education}}</mat-option>
+           
+         </mat-select>
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+         <mat-label>Compagny</mat-label>
+         <input matInput type="text" [formControl]="compagnyCtrl">
+      </mat-form-field>
+      </div>
+
+      <div style="display: flex; width: 100%; gap: 20px; align-items: center;margin-top: 10px;">
+         <mat-form-field appearance="outline">
+            <mat-label>Experience</mat-label>
+            <input matInput type="number" [formControl]="experienceCtrl" >
+         </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Package</mat-label>
+            <input matInput type="number" [formControl]="pakcageCtrl">
+         </mat-form-field>
+         </div>
+ </div>
+ 
+<div mat-dialog-actions class="action">
+     <button mat-raised-button>Annuler</button>
+     <button mat-raised-button color="primary" type="submit">Enregistrer </button>
+</div>
+</form>
