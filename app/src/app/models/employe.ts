@@ -1,6 +1,6 @@
 import { FormControl } from "@angular/forms";
 
-export interface EmployeForm{
+export interface EmployeForm {
   firstName: FormControl<string | null>,
   LastName: FormControl<string | null>,
   email: FormControl<string | null>,
@@ -12,8 +12,19 @@ export interface EmployeForm{
   pakcage: FormControl<number | null>
 }
 
-export enum Genre{
+export enum Genre {
     male = 'Homme',
     femal = 'Femme',
     others = 'Autres'
+  }
+export interface Employee{
+  firstName: string
+  lastName: string
+  email?: string
+  dateOfBirth?: string
+  genre?: Genre
+  education?: string
+  compagny?: string
+  experience?: number
+  pakcage?: number
 }

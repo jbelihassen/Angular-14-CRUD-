@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,12 @@ import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
 export class AppComponent {
   title = 'app';
 
-  constructor(private dialog:MatDialog){}
+  constructor(private dialog:MatDialog,private http: HttpClient){}
+
+  
 
   openAddEditForm(){
     this.dialog.open(EmpAddEditComponent)
   }
+
 }

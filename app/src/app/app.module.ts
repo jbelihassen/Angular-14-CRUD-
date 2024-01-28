@@ -15,13 +15,20 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
+import { EmpCardComponent } from './emp-card/emp-card.component';
 
+import {MatCardModule} from '@angular/material/card';
+import { EmpListComponent } from './emp-list/emp-list.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-    EmpAddEditComponent
+    EmpAddEditComponent,
+    EmpCardComponent,
+    EmpListComponent
    ],
   imports: [
     BrowserModule,
@@ -38,14 +45,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatRadioModule,
     MatSelectModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatCardModule
+
     
   ],
   providers: [  
     MatDatepickerModule,
-    MatNativeDateModule  
+    MatNativeDateModule ,
   ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule { }
 

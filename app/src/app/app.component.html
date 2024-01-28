@@ -1,7 +1,15 @@
-<mat-toolbar color="primary">
+<div style="display: flex; justify-content: center;">
+<div style="width: 70%; display: flex; flex-direction: column; gap: 20px;">
+<mat-toolbar style="height: 40px;" color="primary">
   <span>MyApp</span>
   <span class="example-spacer"></span>
   <button mat-stroked-button (click)="openAddEditForm()">    
     Ajouter Employeur
   </button>
 </mat-toolbar>
+<div style="display: flex; flex-direction: column;gap: 5px;">
+  <emp-list></emp-list>
+</div>
+ 
+</div>
+</div>
