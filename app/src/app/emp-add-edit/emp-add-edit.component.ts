@@ -23,7 +23,7 @@ export class EmpAddEditComponent implements OnInit {
   firstNameCtrl : FormControl<string | null> = new FormControl('')
   LastNameCtrl : FormControl<string | null> = new FormControl('')
   emailCtrl : FormControl<string | null> = new FormControl('')
-  dateOfBirthCtrl : FormControl<string | null> = new FormControl('')
+  dateCtrl : FormControl<string | null> = new FormControl('')
   genreCtrl : FormControl<Genre | null> = new FormControl(Genre.male)
   educationCtrl : FormControl<string | null> = new FormControl('')
   compagnyCtrl : FormControl<string | null> = new FormControl('')
@@ -42,7 +42,7 @@ export class EmpAddEditComponent implements OnInit {
       firstName: this.firstNameCtrl,
       LastName: this.LastNameCtrl,
       email: this.emailCtrl,
-      dateOfBirth: this.dateOfBirthCtrl,
+      date: this.dateCtrl,
       genre: this.genreCtrl,
       education: this.educationCtrl,
       compagny:this.compagnyCtrl,

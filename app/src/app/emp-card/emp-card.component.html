@@ -1,22 +1,44 @@
 <mat-card>
   <mat-card-content>
-    <div style="display: flex;justify-content: space-between; align-items: center;">
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      "
+    >
+      <div>{{ empDetail?.firstName }}{{ empDetail?.lastName }}</div>
       <div>
-        {{empDetail?.firstName}}{{empDetail?.lastName}}
+        {{ empDetail?.email }}
+      </div>
+
+      <div>
+        {{ empDetail?.experience }}
       </div>
       <div>
-        {{empDetail?.email}}
-      </div>
-      
-      <div>
-        {{empDetail?.experience}}
-      </div>
-      <div>  
-        {{empDetail?.education}}
+        {{ empDetail?.education }}
       </div>
       <div>
-        {{empDetail?.pakcage}}
-      </div> 
+        {{ empDetail?.pakcage }}
+      </div>
+      <div>
+        {{ empDetail?.date }}
+      </div>
+      <div style="display: flex; gap: 10px">
+        <span
+          class="material-symbols-outlined"
+          style="color: rgb(91, 126, 239); font-size: 18px"
+        >
+          edit
+        </span>
+        <span
+          class="material-symbols-outlined"
+          style="color: rgb(199, 19, 13); font-size: 18px"
+        >
+          delete
+        </span>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

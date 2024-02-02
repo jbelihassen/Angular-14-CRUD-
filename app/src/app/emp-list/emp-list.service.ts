@@ -16,9 +16,4 @@ getList():Observable<Employee[]>{
   return this.http.get<Employee[]>(this.apiUrl)
 }
 
-
-
-
-
-
 }

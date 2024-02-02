@@ -4,7 +4,7 @@ export interface EmployeForm {
   firstName: FormControl<string | null>,
   LastName: FormControl<string | null>,
   email: FormControl<string | null>,
-  dateOfBirth: FormControl<string | null>,
+  date: FormControl<string | null>,
   genre: FormControl<Genre | null>
   education: FormControl<string | null>
   compagny: FormControl<string | null>
@@ -21,7 +21,7 @@ export interface Employee{
   firstName: string
   lastName: string
   email?: string
-  dateOfBirth?: string
+  date?: string
   genre?: Genre
   education?: string
   compagny?: string
