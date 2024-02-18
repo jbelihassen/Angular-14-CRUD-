@@ -2,28 +2,27 @@
   <mat-card-content>
     <div
       style="
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 200px 100px 100px 150px 150px 60px;
         align-items: center;
         cursor: pointer;
       "
     >
-      <div>{{ empDetail?.firstName }}{{ empDetail?.lastName }}</div>
-      <div>
+      <div>{{ empDetail.firstName + " " + empDetail.lastName }}</div>
+      <!-- <div>
         {{ empDetail?.email }}
+      </div> -->
+      <div>
+        {{ empDetail.education }}
       </div>
+      <div>{{ empDetail.experience }} ans</div>
 
       <div>
-        {{ empDetail?.experience }}
+        {{ empDetail.date | date }}
       </div>
       <div>
-        {{ empDetail?.education }}
-      </div>
-      <div>
-        {{ empDetail?.pakcage }}
-      </div>
-      <div>
-        {{ empDetail?.date }}
+        <span *ngIf="empDetail.salaire">{{ empDetail.salaire }} $</span
+        ><span *ngIf="!empDetail.salaire">---</span>
       </div>
       <div style="display: flex; gap: 10px">
         <span
@@ -32,12 +31,17 @@
         >
           edit
         </span>
-        <span
+        <div (click)="onDeleteEmp()">
+          <span 
           class="material-symbols-outlined"
           style="color: rgb(199, 19, 13); font-size: 18px"
         >
           delete
         </span>
+        </div>
+
+
+        
       </div>
     </div>
   </mat-card-content>

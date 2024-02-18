@@ -12,11 +12,11 @@ export class AppComponent {
   title = 'app';
 
   constructor(private dialog:MatDialog,private http: HttpClient){}
-
-  
-
   openAddEditForm(){
-    this.dialog.open(EmpAddEditComponent)
+   this.dialog.open(EmpAddEditComponent,{
+    width:'480px',
+    height:'530px'
+   });
   }
 
 }

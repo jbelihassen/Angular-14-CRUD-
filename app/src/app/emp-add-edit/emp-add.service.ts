@@ -2,19 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Employee } from '../models/employe';
+import { ApiService } from 'src/api/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmpAddService {
 
-constructor(private http:HttpClient) { }
- apiUrl = `/api/employees`;
+constructor(private apiService:ApiService) { }
 
-addEmployee(body:Employee){
-  const headers = { 'Content-Type': 'application/json' };
-  // body = JSON.stringify(body);
-  return this.http.post(this.apiUrl,body,{headers:headers} )
+createEmployee(employee: Employee) {
+  return this.apiService.createEmployee(employee);
 }
 
 }

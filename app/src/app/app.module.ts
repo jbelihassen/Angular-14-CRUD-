@@ -7,7 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogClose, MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -21,6 +21,7 @@ import { EmpCardComponent } from './emp-card/emp-card.component';
 
 import {MatCardModule} from '@angular/material/card';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { AlertDialogComponent } from './emp-card/alert-dialog/alert-dialog.component';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { EmpListComponent } from './emp-list/emp-list.component';
     AppComponent,
     EmpAddEditComponent,
     EmpCardComponent,
-    EmpListComponent
+    EmpListComponent,AlertDialogComponent
    ],
   imports: [
     BrowserModule,
@@ -48,13 +49,14 @@ import { EmpListComponent } from './emp-list/emp-list.component';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+  
 
     
   ],
   providers: [  
     MatDatepickerModule,
-    MatNativeDateModule ,
+    MatNativeDateModule,
   ],
     bootstrap: [AppComponent],
 })
